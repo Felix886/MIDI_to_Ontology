@@ -1,0 +1,972 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#"
+     xml:base="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions"
+     xmlns:mo="http://purl.org/ontology/mo/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:hpo="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#"
+     xmlns:mto="http://purl.org/ontology/mto/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:keys="http://purl.org/NET/c4dm/keys.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ontology/mo/level -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/mo/level"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#term_status -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#tonic -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/NET/c4dm/keys.owl#tonic">
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/mo/artist -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/mo/artist">
+        <mo:level>1</mo:level>
+        <rdfs:comment>Relates a membership event with the corresponding artist</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/mo/"/>
+        <rdfs:label>artist</rdfs:label>
+        <ns:term_status>testing</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ontology/mo/key -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/mo/key">
+        <rdfs:range rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <mo:level>2</mo:level>
+        <rdfs:comment>
+        Indicated the key used by the musicians during a performance, or the key of a MusicalWork.
+        Any of 24 major or minor diatonic scales that provide the tonal framework for a piece of music.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/mo/"/>
+        <rdfs:label>key</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#followedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#followedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#hasContents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#hasContents"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#hasNext -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#hasNext">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#followedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#progression -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#progression">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/mo/MusicalWork"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/mto/HarmonicProgression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#timeSignature -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#timeSignature"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#mode -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/NET/c4dm/keys.owl#mode">
+        <rdfs:domain rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>major</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>minor</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#wikipedia -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/NET/c4dm/keys.owl#wikipedia">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/mto/hasLowerNumeral -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/mto/hasLowerNumeral">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/mto/TimeSignature"/>
+        <rdfs:comment>Property to assign the number of beats associated with the lower numeral of a time signature, representing the time value of each beat</rdfs:comment>
+        <rdfs:label>has lower numeral</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ontology/mto/hasUpperNumeral -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/ontology/mto/hasUpperNumeral">
+        <rdfs:domain rdf:resource="http://purl.org/ontology/mto/TimeSignature"/>
+        <rdfs:comment>Property to assign the number of beats associated with the upper numeral of a time signature, representing the beats per measure</rdfs:comment>
+        <rdfs:label>has upper numeral</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#Key -->
+
+    <owl:Class rdf:about="http://purl.org/NET/c4dm/keys.owl#Key">
+        <owl:equivalentClass rdf:resource="http://purl.org/ontology/mto/Key"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#Note -->
+
+    <owl:Class rdf:about="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicArtist -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mo/MusicArtist">
+        <mo:level>1</mo:level>
+        <rdfs:comment>
+        A person or a group of people (or a computer :-) ), whose musical 
+        creative work shows sensitivity and imagination 
+    </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/mo/"/>
+        <rdfs:label>music artist</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicalWork -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mo/MusicalWork">
+        <mo:level>2</mo:level>
+        <rdfs:comment>
+    Distinct intellectual or artistic musical creation.
+    
+From the FRBR final report: A work is an abstract entity; there is no single material object one can point to as the work. We recognize the work through individual realizations or expressions of the work, but the work itself exists only in the commonality of
+content between and among the various expressions of the work. When we speak of Homer&apos;s Iliad as a work, our point of reference is not a particular recitation or text of the work, but the intellectual creation that lies behind all the various expressions of the work.     
+
+For example:
+
+work #1 J. S. Bach&apos;s The art of the fugue
+
+    
+    </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ontology/mo/"/>
+        <rdfs:label>musical work</rdfs:label>
+        <ns:term_status>stable</ns:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mto/HarmonicProgression -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mto/HarmonicProgression">
+        <rdfs:comment>A succession of musical chords</rdfs:comment>
+        <rdfs:label>Harmonic Progression</rdfs:label>
+        <skos:altLabel>Chord Progression</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mto/Key -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mto/Key">
+        <rdfs:comment>Group of pitches or scale</rdfs:comment>
+        <rdfs:label>Key</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mto/TimeSignature -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mto/TimeSignature">
+        <rdfs:comment>A notational convention comprised of an upper and a lower numeral used to signify the number of beats per measure and time value of each beat, respectively</rdfs:comment>
+        <rdfs:label>Time Signature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#I -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#I">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Major"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#II -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#II">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Major"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#III -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#III">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Major"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#IV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#IV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Major"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Major -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Major">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Steps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Minor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Minor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Steps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Sequence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Sequence">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#followedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Sequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Steps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Steps"/>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#V -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#V">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Major"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#VI -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#VI">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Major"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#VII -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#VII">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Major"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#i -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#i">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Minor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#ii -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#ii">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Minor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#iii -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#iii">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Minor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#iv -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#iv">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Minor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#v -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#v">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Minor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#vi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#vi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Minor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#vii -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#vii">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Minor"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#A -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#A">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#AFlat -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#AFlat">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#AFlatMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#AFlatMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#AFlat"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/A-flat_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#AFlatMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#AFlatMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#AFlat"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/A-flat_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#AMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#AMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#A"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/A_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#AMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#AMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#A"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/A_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#ASharp -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#ASharp">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#ASharpMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#ASharpMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#ASharp"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/A-sharp_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#B -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#B">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#BFlat -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#BFlat">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#BFlatMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#BFlatMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#BFlat"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/B-flat_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#BFlatMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#BFlatMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#BFlat"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/B-flat_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#BMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#BMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#B"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/B_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#BMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#BMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#B"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/B_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#C -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#C">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#CFlat -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#CFlat">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#CFlatMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#CFlatMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#CFlat"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/C-flat_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#CMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#CMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#C"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/C_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#CMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#CMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#C"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/C_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#CSharp -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#CSharp">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#CSharpMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#CSharpMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#CSharp"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/C-sharp_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#CSharpMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#CSharpMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#CSharp"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/C-sharp_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#D -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#D">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#DFlat -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#DFlat">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#DFlatMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#DFlatMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#DFlat"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/D-flat_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#DMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#DMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#D"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/D_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#DMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#DMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#D"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/D_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#DSharp -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#DSharp">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#DSharpMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#DSharpMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#DSharp"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/D-sharp_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#E -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#E">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#EFlat -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#EFlat">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#EFlatMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#EFlatMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#EFlat"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/E-flat_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#EFlatMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#EFlatMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#EFlat"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/E-flat_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#EMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#EMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#E"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/E_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#EMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#EMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#E"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/E_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#F -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#F">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#FMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#FMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#F"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/F_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#FMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#FMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#F"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/F_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#FSharp -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#FSharp">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#FSharpMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#FSharpMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#FSharp"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/F-sharp_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#FSharpMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#FSharpMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#FSharp"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/F-sharp_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#G -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#G">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#GFlat -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#GFlat">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#GFlatMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#GFlatMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#GFlat"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/G-flat_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#GMajor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#GMajor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#G"/>
+        <keys:mode>major</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/G_major</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#GMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#GMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#G"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/G_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#GSharp -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#GSharp">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Note"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/keys.owl#GSharpMinor -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/NET/c4dm/keys.owl#GSharpMinor">
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/keys.owl#Key"/>
+        <keys:tonic rdf:resource="http://purl.org/NET/c4dm/keys.owl#GSharp"/>
+        <keys:mode>minor</keys:mode>
+        <keys:wikipedia rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/G-sharp_minor</keys:wikipedia>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#John_Coltrane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#John_Coltrane">
+        <rdf:type rdf:resource="http://purl.org/ontology/mo/MusicArtist"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Song1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#Song1">
+        <mo:artist rdf:resource="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#John_Coltrane"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#I"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#II"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#III"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#IV"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#V"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#VI"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#VII"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#i"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#ii"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#iii"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#iv"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#v"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#vi"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elisevink/ontologies/2023/HarmonicProgressions#vii"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
