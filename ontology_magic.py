@@ -255,7 +255,9 @@ def harmonic_reduction(midi_file):
     #Ontology
 
     onto_path.append("C:/Users/frn690/Documents/Experiment22feb")
-    onto = get_ontology("ChordProgression3.1.rdf").load()
+    #Please add your own path here. Place all files in 1 directory.
+    
+    onto = get_ontology("HPO.rdf").load()
     mo = get_namespace("http://purl.org/ontology/mo/")
     keys = get_namespace("http://purl.org/NET/c4dm/keys.owl#")
     mto = get_namespace("http://purl.org/ontology/mto/")
